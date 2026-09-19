@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Portal</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+
+        <div class="logo">
+            💼 JobPortal
+        </div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/jobs">Find Jobs</a>
+            <a href="/login">Login</a>
+            <a href="/register" class="register-btn">Register</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="welcome-tag">
+                ✨ Find your next opportunity
+            </span>
+
+            <h1>
+                Find a job that
+                <span>fits your future.</span>
+            </h1>
+
+            <p>
+                Discover jobs, internships and career opportunities
+                from companies looking for talented people like you.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="/jobs" class="primary-btn">
+                    Find Jobs →
+                </a>
+
+                <a href="/register" class="secondary-btn">
+                    Create Profile
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Job Search Preview -->
+        <div class="search-card">
+
+            <h3>🔎 Search for your next opportunity</h3>
+
+            <div class="search-row">
+
+                <div class="search-box">
+                    <span>💼</span>
+                    <div>
+                        <small>Job title</small>
+                        <p>e.g. Python Developer</p>
+                    </div>
+                </div>
+
+                <div class="search-box">
+                    <span>📍</span>
+                    <div>
+                        <small>Location</small>
+                        <p>e.g. Chennai</p>
+                    </div>
+                </div>
+
+                <a href="/jobs" class="search-btn">
+                    Search Jobs
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Categories -->
+    <section class="section">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="small-title">EXPLORE</span>
+                <h2>Popular Job Categories</h2>
+            </div>
+
+            <a href="/jobs">View all →</a>
+
+        </div>
+
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>IT & Software</h3>
+                <p>Software, development and technology jobs</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">📊</div>
+                <h3>Data & Analytics</h3>
+                <p>Data analyst and business intelligence roles</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🎨</div>
+                <h3>Design</h3>
+                <p>UI, UX and creative opportunities</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">📢</div>
+                <h3>Marketing</h3>
+                <p>Digital marketing and business roles</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Opportunities -->
+    <section class="section opportunities">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="small-title">OPPORTUNITIES</span>
+                <h2>Featured Jobs & Internships</h2>
+            </div>
+
+            <a href="/jobs">Explore more →</a>
+
+        </div>
+
+
+        <div class="job-grid">
+
+            <div class="job-card">
+
+                <div class="company-logo">G</div>
+
+                <div class="job-info">
+
+                    <span class="job-type">FULL TIME</span>
+
+                    <h3>Python Developer</h3>
+
+                    <p>Technology Company</p>
+
+                    <div class="job-details">
+                        <span>📍 Chennai</span>
+                        <span>💰 ₹4–7 LPA</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <div class="company-logo">D</div>
+
+                <div class="job-info">
+
+                    <span class="job-type internship">
+                        INTERNSHIP
+                    </span>
+
+                    <h3>Software Developer Intern</h3>
+
+                    <p>Digital Solutions</p>
+
+                    <div class="job-details">
+                        <span>📍 Bangalore</span>
+                        <span>💰 ₹15K/month</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="job-card">
+
+                <div class="company-logo">A</div>
+
+                <div class="job-info">
+
+                    <span class="job-type">FULL TIME</span>
+
+                    <h3>Web Developer</h3>
+
+                    <p>Innovative Tech</p>
+
+                    <div class="job-details">
+                        <span>📍 Hyderabad</span>
+                        <span>💰 ₹5–8 LPA</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Why JobPortal -->
+    <section class="why-section">
+
+        <div class="why-content">
+
+            <span class="small-title">WHY JOBPORTAL?</span>
+
+            <h2>
+                Everything you need for
+                your career journey.
+            </h2>
+
+            <p>
+                Find the right opportunity, create your professional
+                profile and connect with companies from one place.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+                <span>🔎</span>
+                <div>
+                    <h3>Smart Job Search</h3>
+                    <p>Search jobs using useful filters.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <span>📄</span>
+                <div>
+                    <h3>Build Your Profile</h3>
+                    <p>Create a professional job profile.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <span>❤️</span>
+                <div>
+                    <h3>Save Jobs</h3>
+                    <p>Save opportunities for later.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <span>📊</span>
+                <div>
+                    <h3>Track Applications</h3>
+                    <p>Follow your application progress.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            💼 JobPortal
+        </div>
+
+        <p>
+            Connecting talent with opportunity.
+        </p>
+
+        <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="/jobs">Find Jobs</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 JobPortal. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
