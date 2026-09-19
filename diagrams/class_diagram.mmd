@@ -1,0 +1,73 @@
+classDiagram
+
+class User {
+    +int user_id
+    +string name
+    +string email
+    +string password
+    +string phone
+    +register()
+    +login()
+    +applyJob()
+    +saveJob()
+}
+
+class Company {
+    +int company_id
+    +string company_name
+    +string email
+    +string location
+    +string description
+    +registerCompany()
+    +postJob()
+    +manageJobs()
+    +viewApplications()
+}
+
+class Job {
+    +int job_id
+    +string title
+    +string description
+    +string location
+    +string salary
+    +string job_type
+    +string experience
+    +int vacancies
+    +createJob()
+    +updateJob()
+    +deleteJob()
+}
+
+class Application {
+    +int user_id
+    +int job_id
+    +date applied_date
+    +string status
+    +submitApplication()
+    +updateStatus()
+    +viewStatus()
+}
+
+class Skill {
+    +int skill_id
+    +string skill_name
+    +addSkill()
+    +removeSkill()
+}
+
+class Notification {
+    +int notification_id
+    +int user_id
+    +string message
+    +string status
+    +date created_date
+    +sendNotification()
+    +markAsRead()
+}
+
+User "1" --> "0..*" Application : submits
+Job "1" --> "0..*" Application : receives
+Company "1" --> "0..*" Job : posts
+Job "1" --> "0..*" Skill : requires
+User "1" --> "0..*" Notification : receives
+User "1" --> "0..*" Job : saves 

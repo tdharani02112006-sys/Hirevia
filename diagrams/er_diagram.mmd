@@ -1,0 +1,68 @@
+erDiagram
+    USERS {
+        int user_id PK
+        string name
+        string email
+        string password
+        string phone
+    }
+
+    COMPANIES {
+        int company_id PK
+        string company_name
+        string email
+        string location
+        string description
+    }
+
+    JOBS {
+        int job_id PK
+        int company_id FK
+        string title
+        string description
+        string location
+        string salary
+        string job_type
+        string experience
+        int vacancies
+    }
+
+    APPLICATIONS {
+        int user_id PK
+        int job_id PK
+        date applied_date
+        string status
+    }
+
+    SKILLS {
+        int skill_id PK
+        string skill_name
+    }
+
+    JOB_SKILLS {
+        int job_id PK
+        int skill_id PK
+    }
+
+    SAVED_JOBS {
+        int user_id PK
+        int job_id PK
+        date saved_date
+    }
+
+    NOTIFICATIONS {
+        int notification_id PK
+        int user_id FK
+        string message
+        string status
+        date created_date
+    }
+
+    USERS ||--o{ APPLICATIONS : applies
+    JOBS ||--o{ APPLICATIONS : receives
+    COMPANIES ||--o{ JOBS : posts
+    JOBS ||--o{ JOB_SKILLS : has
+    SKILLS ||--o{ JOB_SKILLS : contains
+    USERS ||--o{ SAVED_JOBS : saves
+    JOBS ||--o{ SAVED_JOBS : saved
+    USERS ||--o{ NOTIFICATIONS : receives

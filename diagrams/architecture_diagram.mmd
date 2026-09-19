@@ -1,0 +1,35 @@
+flowchart TB
+
+    U["Job Seeker"]
+    R["Recruiter / Company"]
+    A["Admin"]
+
+    F["Hirevia Frontend<br/>HTML + CSS"]
+
+    AUTH["Authentication"]
+    JOB["Job Management"]
+    APP["Application Management"]
+    NOT["Notification Management"]
+    ADM["Admin Management"]
+
+    FL["Flask Application"]
+
+    DB["PostgreSQL Database"]
+
+    U --> F
+    R --> F
+    A --> F
+
+    F --> AUTH
+    F --> JOB
+    F --> APP
+    F --> NOT
+    F --> ADM
+
+    AUTH --> FL
+    JOB --> FL
+    APP --> FL
+    NOT --> FL
+    ADM --> FL
+
+    FL --> DB
