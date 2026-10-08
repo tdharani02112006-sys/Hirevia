@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Registration - Hirevia</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef4ff, #f8fbff);
+        }
+
+        .container {
+            width: 430px;
+            margin: 60px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 90px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #1d4ed8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #163fae;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Hirevia</h1>
+
+    <div class="subtitle">
+        Company Registration
+    </div>
+
+    {% if error %}
+        <div class="error">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <form method="POST" action="/company-register">
+
+        <label>Company Name</label>
+        <input
+            type="text"
+            name="company_name"
+            placeholder="Enter company name"
+            required
+        >
+
+        <label>Email</label>
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter company email"
+            required
+        >
+
+        <label>Password</label>
+        <input
+            type="password"
+            name="password"
+            placeholder="Create password"
+            required
+        >
+
+        <label>Location</label>
+        <input
+            type="text"
+            name="location"
+            placeholder="Enter company location"
+            required
+        >
+
+        <label>Company Description</label>
+        <textarea
+            name="description"
+            placeholder="Tell us about your company"
+        ></textarea>
+
+        <button type="submit">
+            Register Company
+        </button>
+
+    </form>
+
+    <div class="login-link">
+        Already registered?
+        <a href="/company-login">Company Login</a>
+    </div>
+
+</div>
+
+</body>
+</html>

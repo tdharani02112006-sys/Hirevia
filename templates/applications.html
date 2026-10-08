@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hirevia - My Applications</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        .header {
+            background: white;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #1769e0;
+        }
+
+        .back {
+            text-decoration: none;
+            color: #1769e0;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .application-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .application-card h2 {
+            margin-top: 0;
+            color: #1769e0;
+        }
+
+        .application-card p {
+            color: #666;
+            margin: 8px 0;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #fff3cd;
+            color: #856404;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">Hirevia</div>
+        <a href="/dashboard" class="back">← Dashboard</a>
+    </div>
+
+    <div class="container">
+
+        <h1>My Applications</h1>
+
+        <p class="subtitle">
+            Track the jobs you have applied for.
+        </p>
+
+        <div class="application-card">
+            <h2>Python Developer</h2>
+            <p>📍 Chennai</p>
+            <p>💼 Full Time</p>
+            <span class="status">Application Submitted</span>
+        </div>
+
+        <div class="application-card">
+            <h2>Software Intern</h2>
+            <p>📍 Remote</p>
+            <p>🎓 Internship</p>
+            <span class="status">Under Review</span>
+        </div>
+
+    </div>
+
+</body>
+</html>

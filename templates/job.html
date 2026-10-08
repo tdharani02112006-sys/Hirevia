@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hirevia - Find a Job</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        .header {
+            background: white;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #1769e0;
+        }
+
+        .back {
+            text-decoration: none;
+            color: #1769e0;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .job-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .job-card h2 {
+            margin-top: 0;
+            color: #1769e0;
+        }
+
+        .job-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .details {
+            margin: 12px 0;
+            color: #444;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background: #1769e0;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .apply-btn:hover {
+            background: #0f55bd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">Hirevia</div>
+        <a href="/dashboard" class="back">← Dashboard</a>
+    </div>
+
+    <div class="container">
+
+        <h1>Find a Job</h1>
+
+        <p class="subtitle">
+            Explore job opportunities and find the right career for you.
+        </p>
+
+        <div class="search-box">
+            <input
+                type="text"
+                placeholder="Search for jobs, skills or locations"
+            >
+        </div>
+
+        <!-- Python Developer -->
+        <div class="job-card">
+            <h2>Python Developer</h2>
+
+            <div class="details">
+                📍 Chennai &nbsp; | &nbsp; 💼 Full Time
+            </div>
+
+            <p>
+                We are looking for a Python developer with basic knowledge
+                of Python, Flask and databases.
+            </p>
+
+            <a
+                href="/apply?job_title=Python%20Developer&company=Hirevia%20Company&location=Chennai"
+                class="apply-btn"
+            >
+                Apply Now
+            </a>
+        </div>
+
+        <!-- Web Developer -->
+        <div class="job-card">
+            <h2>Web Developer</h2>
+
+            <div class="details">
+                📍 Chennai &nbsp; | &nbsp; 💼 Full Time
+            </div>
+
+            <p>
+                Join our team and work on modern web applications and
+                exciting development projects.
+            </p>
+
+            <a
+                href="/apply?job_title=Web%20Developer&company=Hirevia%20Company&location=Chennai"
+                class="apply-btn"
+            >
+                Apply Now
+            </a>
+        </div>
+
+        <!-- Software Intern -->
+        <div class="job-card">
+            <h2>Software Intern</h2>
+
+            <div class="details">
+                📍 Remote &nbsp; | &nbsp; 🎓 Internship
+            </div>
+
+            <p>
+                Internship opportunity for students interested in software
+                development and technology.
+            </p>
+
+            <a
+                href="/apply?job_title=Software%20Intern&company=Hirevia%20Company&location=Remote"
+                class="apply-btn"
+            >
+                Apply Now
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
